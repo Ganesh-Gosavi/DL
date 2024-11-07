@@ -1,0 +1,154 @@
+DL VIVA
+Assignment 2 
+The first step toward using deep learning networks is to understand the working of a simple feedforward
+neural network we get started with how we can build our first neural network model using Keras running
+on top of the Tensorflow library.
+TensorFlow is an open-source platform for machine learning. Keras is the high-level application
+programming interface (API) of TensorFlow. Using Keras, we can rapidly develop a prototype system and
+test it out. This is the first in a three-part series on using TensorFlow for supervised classification tasks.
+
+Problem Statement: We’re building a feed-forward neural network using Keras and TensorFlow to classify handwritten digits from the MNIST dataset. Key tasks are importing packages, loading data, defining the model, training with SGD, evaluating, and plotting accuracy and loss.
+
+Objectives: Understand how to use Keras and TensorFlow to build, train, and evaluate a neural network, aiming for >90% accuracy on the MNIST dataset. Research one technique to improve model generalization.
+
+Solution: The model uses a Flatten layer to convert images into a vector, and Dense layers with ReLU and softmax for activation. ReLU helps in the hidden layer, while softmax outputs probabilities for each digit.
+
+Theory: Deep learning with TensorFlow and Keras allows us to create strong ML models. Keras helps build models quickly, and TensorFlow provides powerful support for deep learning.
+
+Evaluate the model’s accuracy with evaluate() and check individual predictions with predict(). Aim to increase accuracy and lower loss for strong model confidence.
+
+
+Assignment No. 3: Image Classification using CNN
+
+Problem Statement: Develop an image classification model by dividing it into four main stages:
+
+Loading and preprocessing image data
+Defining the model architecture
+Training the model
+Evaluating model performance
+Objective:
+
+Apply deep learning to classify images with >90% accuracy.
+Train and evaluate a model.
+Optimize the model to solve real-world image classification problems.
+Outcome: Students will:
+
+Use deep learning tools like TensorFlow and Keras.
+Build and train a CNN for image classification.
+Evaluate and improve the model.
+Expected Solution: Implement and train a CNN on the MNIST dataset to classify handwritten digits with increased accuracy and reduced loss. Achieve >90% accuracy through effective model training and evaluation.
+
+Methodology:
+
+Deep Learning with Convolutional Neural Network (CNN)
+Requirements:
+
+System: Desktop or laptop with Linux, Windows, or Mac OS
+Software: Python 3.9+, Anaconda, Jupyter Notebook, TensorFlow, and Keras
+Theory Overview: Deep learning, specifically CNNs, has transformed machine learning by excelling in pattern recognition tasks. CNNs are structured to process image data through layers, extracting features that enable image classification. Key components include:
+
+Input Layer: Processes raw image data (width, height, and channels).
+Convolutional Layers: Extract features by sliding a filter over the image.
+Pooling Layers: Reduce dimensionality and retain essential features.
+Fully Connected Layers: Integrate features for classification output.
+Steps to Implement CNN for Image Classification:
+
+Load image data and preprocess it.
+Define CNN architecture using convolution, ReLU, and pooling layers.
+Train the model, monitoring accuracy and loss.
+Evaluate the model, aiming for high accuracy and low loss.
+Conclusion: The model's accuracy should improve across epochs, demonstrating effective learning. Achieving low loss and high test accuracy indicates a well-trained model that can confidently classify images.
+
+
+
+Assignment No 5
+Title: Continuous Bag of Words (CBOW) Model Implementation
+
+Aim
+To implement and understand the Continuous Bag of Words (CBOW) model in Natural Language Processing (NLP).
+
+Theory
+NLP: Natural Language Processing focuses on the interaction between computers and human language.
+Word Embedding in NLP: A technique to represent words as vectors, capturing semantic meaning.
+Word2Vec Techniques: Includes CBOW (predicts target word from surrounding words) and Skip-gram (predicts surrounding words from target).
+Applications of Word Embedding: Used in chatbots, sentiment analysis, machine translation, and recommendation systems.
+CBOW Architecture: Uses context words to predict a target word within a fixed window size.
+CBOW Input & Output: Input is context words; output is the predicted target word.
+Tokenizer: A tool that splits text into tokens (words or phrases) for processing.
+Window Size: Defines the range of context words around a target word.
+Embedding & Lambda Layer (Keras): Embedding converts words to dense vectors, and Lambda is used for custom operations.
+yield(): A Python feature that creates a generator to return values iteratively.
+
+Steps / Algorithm
+Dataset Preparation:
+
+Create a paragraph with 5-10 sentences in English as input data.
+Library Import:
+
+Import required libraries, including Keras for model building and Gensim for NLP operations.
+Data Preprocessing:
+
+Preprocess the paragraph by converting it into a structured format for NLP processing.
+Tokenization:
+
+Tokenize each word in the paragraph using Gensim’s tokenizer and fit it to the tokenizer.
+Count the total number of words and sentences.
+Generate Context-Target Pairs:
+
+For each word in the sentence, create context words based on a defined window size (words around the target word).
+Structure these context-target word pairs for model input.
+Model Setup:
+
+Build a Sequential neural network model with Keras, using an Embedding layer to convert words into dense vectors.
+Add a Lambda layer to average context word embeddings.
+Add a Dense output layer to predict the target word from the context.
+Model Compilation:
+
+Compile the model with categorical cross-entropy as the loss function and Adam as the optimizer.
+Save Word Vectors:
+
+After training, save the word embeddings to a file for later use or analysis.
+Load and Test with Gensim:
+
+Load the saved word embeddings using Gensim to perform similarity checks.
+Test by querying similar words to a given input word.
+Conclusion
+This experiment demonstrated the CBOW model’s architecture and implementation. We learned about word embeddings and their usefulness in NLP tasks like text recognition and speech-to-text conversion.
+
+Assignment No. 4
+
+Problem Statement:
+Use Autoencoder to implement anomaly detection.
+Build the model by using
+a. Import required libraries
+b. Upload/access the dataset
+c. Encoder converts it into latent representation
+d. Decoder networks convert it back to the original input
+e. Compile the models with Optimizer, Loss, and Evaluation
+Solution Expected:
+AutoEncoders are widely used in anomaly detection. The reconstruction errors are used as the
+anomaly scores. Let us look at how we can use AutoEncoder for anomaly detection using
+TensorFlow.
+Import the required libraries and load the data. Here we are using the ECG data which consists of
+labels 0 and 1. Label 0 denotes the observation as an anomaly and label 1 denotes the observation
+as normal.
+
+Objectives to be achieved:
+1)Use Autoencoder to implement anomaly detection.
+
+Methodology to be used:
+
+AutoEncoder is a generative unsupervised deep learning algorithm used for reconstructing high-
+dimensional input data using a neural network with a narrow bottleneck layer in the middle which
+
+contains the latent representation of the input data.
+
+Conclusion:
+Autoencoders can be used as an anomaly detection algorithm when we have an unbalanced
+dataset where we have a lot of good examples and only a few anomalies. Autoencoders are
+trained to minimize reconstruction error. When we train the autoencoders on normal data or good
+data, we can hypothesize that the anomalies will have higher reconstruction errors than the good
+or normal data.
+
+
+
